@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Converter")]
+[assembly: AssemblyTitle("TCPClient")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("Converter")]
+[assembly: AssemblyProduct("TCPClient")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4f938c5e-374e-4af6-a4fc-94c904cb261f")]
+[assembly: Guid("9bcb2420-1ee3-4e4e-b211-50eab121b202")]
 
 // Version information for an assembly consists of the following four values:
 //
