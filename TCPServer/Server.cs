@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Components;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -43,9 +44,15 @@ namespace TCPServer
             using (StreamWriter sw = new StreamWriter(socket.GetStream()))
 
             {
-                String incomingString = sr.ReadToEnd();
+                String incomingString = sr.ReadLine();
 
                 Console.WriteLine($"String in:\n{incomingString}");
+
+                sw.WriteLine(Converter.ToGrams(15));
+
+
+
+                sw.WriteLine(Converter.ToOunces(15));
             }
         }
     }

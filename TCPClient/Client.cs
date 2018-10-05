@@ -35,7 +35,10 @@ namespace TCPClient
             using (StreamWriter sw = new StreamWriter(ns))
 
             {
-                sw.WriteLine($"");
+                sw.WriteLine($"ToGrams: " + 15);
+                sw.Flush();
+
+                sw.WriteLine($"ToOunces: " + 15);
                 sw.Flush();
             }
         }
