@@ -44,15 +44,45 @@ namespace TCPServer
             using (StreamWriter sw = new StreamWriter(socket.GetStream()))
 
             {
+                Console.WriteLine("Server\n");
+
+                //Request n' Response #1
                 String incomingString = sr.ReadLine();
 
                 Console.WriteLine($"String in:\n{incomingString}");
 
-                sw.WriteLine(Converter.ToGrams(15));
+                SplitAndCalculate(incomingString, sw);
 
+                //Request n' Response #2
+                String incomingString2 = sr.ReadLine();
 
+                Console.WriteLine($"String in:\n{incomingString2}");
 
-                sw.WriteLine(Converter.ToOunces(15));
+                SplitAndCalculate(incomingString2, sw);
+            }
+        }
+        private void SplitAndCalculate(string aString, StreamWriter sw)
+        {
+            string[] split = aString.Split(' ');
+
+            if (split[0] == "ToGrams")
+            {
+                double result = Converter.ToGrams(Convert.ToDouble(split[1]));
+
+                Console.WriteLine($"Sending result: " + result);
+
+                sw.WriteLine($"Result: " + result);
+                sw.Flush();
+            }
+
+            if (split[0] == "ToOunces")
+            {
+                double result = Converter.ToOunces(Convert.ToDouble(split[1]));
+
+                Console.WriteLine($"Sending result: " + result);
+
+                sw.WriteLine($"Result: " + result);
+                sw.Flush();
             }
         }
     }
