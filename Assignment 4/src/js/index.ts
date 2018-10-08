@@ -1,25 +1,38 @@
-//Opgave kode
-
 const gramMultiplier: number = 28.34952;
 const ounceMultiplier: number = 0.03527396195;
-
-let weight: HTMLElement = <HTMLElement> document.getElementById("weight");
-
-function toGrams(weight: number): string {
-    return weight * gramMultiplier + " grams";
-}
 
 function toOunces(weight: number): string {
     return weight * ounceMultiplier + " ounces";
 }
 
+function convertToOunces(): void{
+    let result: HTMLOutputElement = <HTMLOutputElement> document.getElementById("result");
+
+    let weight: HTMLInputElement = <HTMLInputElement> document.getElementById("weight")
+    let tal: number = Number(weight.value);
+    let conversion: string = toOunces(tal);
+
+    result.innerHTML = conversion;
+}
+
+function toGrams(weight: number): string {
+    return weight * gramMultiplier + " grams";
+}
+
+function convertToGrams(): void{
+    let result: HTMLElement = <HTMLDivElement> document.getElementById("result");
+
+    let weight: HTMLInputElement = <HTMLInputElement> document.getElementById("weight")
+    let tal: number = Number(weight.value);
+    let conversion: string = toGrams(tal);
+
+    result.innerHTML = conversion;
+}
+
 let oButton: HTMLButtonElement = <HTMLButtonElement> document.getElementById("OButton");
 
-let gButton: HTMLElement = <HTMLElement> document.getElementById("GButton");
+let gButton: HTMLButtonElement = <HTMLButtonElement> document.getElementById("GButton");
 
-oButton.addEventListener = toOunces(Number(weight));
+oButton.addEventListener("click", convertToOunces);
 
-gButton.addEventListener = toGrams(Number(weight));
-
-let result: HTMLDivElement = <HTMLDivElement> document.getElementById("result");
-result.innerHTML = toGrams(Number(weight)) || toOunces(Number(weight));
+gButton.addEventListener("click", convertToGrams);

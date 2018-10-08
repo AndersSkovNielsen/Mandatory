@@ -1,0 +1,4 @@
+URI til Github repository:
+https://github.com/AndersSkovNielsen/Mandatory
+
+URI til Azure web site:
