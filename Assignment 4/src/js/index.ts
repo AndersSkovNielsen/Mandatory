@@ -20,7 +20,7 @@ function toGrams(weight: number): string {
 }
 
 function convertToGrams(): void{
-    let result: HTMLElement = <HTMLDivElement> document.getElementById("result");
+    let result: HTMLOutputElement = <HTMLOutputElement> document.getElementById("result");
 
     let weight: HTMLInputElement = <HTMLInputElement> document.getElementById("weight")
     let tal: number = Number(weight.value);
