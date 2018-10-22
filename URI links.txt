@@ -2,4 +2,4 @@ URI til Github repository:
 https://github.com/AndersSkovNielsen/Mandatory
 
 URI til Azure web site:
-Link to come in the future
+https://ts-ande-easj.azurewebsites.net/
